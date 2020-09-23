@@ -22,7 +22,10 @@ const App: React.FC = () => {
 	}, []);
 
 	const getAPI = () => {
-		const API = 'http://localhost:8080/';
+		// Online Version
+		const API = 'https://backend-meta-movies-oirgvhhej.vercel.app/';
+		// Local Version
+		// const API = 'http://localhost:8080/';
 
 		fetch(API)
 			.then((response) => {
