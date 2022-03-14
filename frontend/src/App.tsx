@@ -1,5 +1,6 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import './App.css';
+import data from './data/movies.json';
 
 interface Movie {
 	director: string;
@@ -12,39 +13,11 @@ interface Movie {
 	rating: string;
 	release_year: number;
 	summary: string;
-	__createdtime: number;
-	__updatedtime__: number;
 }
 
 const App: React.FC = () => {
-	useEffect(() => {
-		getAPI();
-	}, []);
-
-	const getAPI = () => {
-		// Online Version
-		const API = 'https://backend-meta-movies-oirgvhhej.vercel.app/';
-		// Local Version
-		// const API = 'http://localhost:8080/';
-
-		fetch(API)
-			.then((response) => {
-				console.log(response);
-				return response.json();
-			})
-			.then((apiData) => {
-				console.log(apiData);
-
-				setLoading(true);
-				setMovieData(apiData);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	};
-
-	let [loading, setLoading] = useState<boolean>(true);
-	let [movieData, setMovieData] = useState<Movie[]>([]);
+	let [loading] = useState<boolean>(true);
+	let [movieData] = useState<Movie[]>(data);
 
 	return (
 		<Fragment>
