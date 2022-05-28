@@ -1,6 +1,6 @@
 # Meta Movies
 
-![https://res.cloudinary.com/d74fh3kw/image/upload/v1600882514/meta-movies_q3flek.png](https://res.cloudinary.com/d74fh3kw/image/upload/v1600882514/meta-movies_q3flek.png 'Meta Movie Reviews')
+![Meta Movies](/img/meta-movies.png 'Meta Movie Reviews')
 
 ## Installation
 
